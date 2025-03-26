@@ -1,5 +1,8 @@
 # Player de Vídeo com Playlist em HTML
 
+![Logo](imagens/img-player.png)
+
+
 Este projeto é um **player de vídeo interativo** em HTML, CSS e JavaScript, com suporte para **playlist** e reprodução de vídeos nos formatos **MP4** e **HLS** (M3U8). Ele permite que o usuário assista vídeos sequenciais, faça a gestão da playlist, e adicione novos vídeos diretamente na interface, tudo isso de forma simples e responsiva.
 
 A aplicação utiliza a biblioteca **Hls.js** para oferecer suporte à reprodução de vídeos HLS, que é um formato amplamente usado para vídeos ao vivo e streaming.
