@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de Vídeo Simples</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+
+    <div class="player-container">
+        <div id="videoContainer">
+            <video id="videoPlayer" crossorigin controls></video>
+        </div>
+        
+        <div id="playlist">
+            <!-- Playlist definida diretamente em HTML -->
+            <div class="playlist-item active" 
+                 data-sources='[{"src": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8", "type": "application/x-mpegURL"}]'
+                 data-thumbnail="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png/800px-Big.Buck.Bunny.-.Opening.Screen.png">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png/800px-Big.Buck.Bunny.-.Opening.Screen.png" alt="#">
+                <div>
+                    <div>Video exemplo-M3U8</div>
+                    <small>Clique para reproduzir</small>
+                </div>
+            </div>
+
+            <div class="playlist-item" 
+                 data-sources='[{"src": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", "type": "video/mp4"}]'
+                 data-thumbnail="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png/800px-Big.Buck.Bunny.-.Opening.Screen.png">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png/800px-Big.Buck.Bunny.-.Opening.Screen.png" alt="#">
+                <div>
+                    <div>Video exemplo-MP4</div>
+                    <small>Clique para reproduzir</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="addVideoForm" class="hidden">
+        <h3>Adicionar Vídeo</h3>
+        <input type="text" id="videoTitle" placeholder="Título do vídeo">
+        <input type="text" id="videoUrl" placeholder="URL do vídeo (MP4/M3U8)">
+        <input type="text" id="videoThumb" placeholder="URL da miniatura">
+        <button onclick="addVideo()">Adicionar</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
